@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SocialLinks from '../components/SocialLinks';
 
 const Home = () => {
   const { t } = useLanguage();
@@ -8,7 +9,7 @@ const Home = () => {
   return (
     <div className="relative h-screen">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute object-fit bg-[auto_50%] inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
             'url(https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGguanBnIiwiaWF0IjoxNzM5MDUzMTk0LCJleHAiOjE3NzA1ODkxOTR9.2gP6RHQZwK_NOdPeEojXY9iMpNpxd78q9mfsDw_bGCA)',
@@ -23,8 +24,10 @@ const Home = () => {
           {t('hero.title')}
         </p>
       </div>
+
+      <SocialLinks />
     </div>
   );
 };
 
-export default Home
+export default Home;

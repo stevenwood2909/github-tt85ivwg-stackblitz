@@ -12,7 +12,7 @@ const Biography = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledro_pic1.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcm9fcGljMS5qcGciLCJpYXQiOjE3NDE3MDg0NTIsImV4cCI6MTg5OTM4ODQ1Mn0.mKE7YrKh3_FrQklkQytmFLpMYHQIUA59Ixieqm9mjBA" 
+              src="https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_le_dro_tenor_plouescat.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVfZHJvX3Rlbm9yX3Bsb3Vlc2NhdC5qcGciLCJpYXQiOjE3NDIwNDgyOTYsImV4cCI6MTg5OTcyODI5Nn0.Ckz-bPI-P9aCnqjxpgROYDarXmpvOkv9fjH4GiaxA54" 
               alt="Stéphane LE DRO performing"
               className="rounded-lg shadow-xl"
             />
