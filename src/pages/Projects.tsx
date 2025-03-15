@@ -25,20 +25,20 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Mahmoud Ahmed & Badume's Band",
-      description: t('projects.badume.description'),
-      image: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?q=80&w=1974",
-      year: "2010-2015",
-      role: t('projects.badume.role'),
-      link: "https://www.youtube.com/watch?v=YhMgUTvV4XY"
-    },
-    {
-      id: 3,
       title: "Yvan Knorst Trio",
       description: t('projects.knorst.description'),
       image: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=2072",
       year: "2022-Present",
       role: t('projects.knorst.role'),
+    },
+    {
+      id: 3,
+            title: "Mahmoud Ahmed & Badume's Band",
+      description: t('projects.badume.description'),
+      image: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?q=80&w=1974",
+      year: "2010-2015",
+      role: t('projects.badume.role'),
+      link: "https://www.youtube.com/watch?v=YhMgUTvV4XY"
     }
   ];
 
