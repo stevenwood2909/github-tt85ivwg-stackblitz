@@ -12,9 +12,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Slider } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-// Custom styled Slider component
 const CustomSlider = styled(Slider)({
-  color: '#fbbf2f', // Using your accent-light color
+  color: '#fbbf2f',
   '& .MuiSlider-thumb': {
     backgroundColor: '#fbbf2f',
     '&:hover, &.Mui-focusVisible': {
@@ -25,7 +24,7 @@ const CustomSlider = styled(Slider)({
     },
   },
   '& .MuiSlider-rail': {
-    backgroundColor: '#404040', // Darker background for the rail
+    backgroundColor: '#404040',
   },
   '& .MuiSlider-track': {
     backgroundColor: '#fbbf2f',
@@ -57,16 +56,13 @@ const AudioPlayer = () => {
   const currentPercentage = currentTrack
     ? (currentTrackProgress / currentTrack.duration) * 100
     : 0;
-  console.log('current percentage = %D', currentPercentage);
 
-  // handle volume change
   const handleVolumeChange = (event: Event, newValue: number | number[]) => {
     setVolume(newValue as number);
   };
 
-  // handle time update when source is played
   const handleTimeUpdate = () => {
-    if (audioRef.current /*&& !isDragging*/) {
+    if (audioRef.current) {
       setProgress(audioRef.current.currentTime);
       setDuration(audioRef.current.duration);
     }
@@ -78,13 +74,12 @@ const AudioPlayer = () => {
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   };
 
-  // handle track position changed
   const handleSeeking = (newTime: any) => {
     if (audioRef.current) {
       audioRef.current.currentTime = newTime as number;
     }
-   
   };
+
   useEffect(() => {
     if (currentTrack && audioRef.current) {
       if (audioRef.current.src !== currentTrack.audio_url) {
@@ -109,34 +104,32 @@ const AudioPlayer = () => {
   }, [volume, isMuted]);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-zinc-900/80 backdrop-blur-md border-t border-zinc-800/50 px-2 py-2 z-50">
+    <div className="fixed bottom-0 left-0 right-0 bg-zinc-900/80 backdrop-blur-md border-t border-zinc-800/50 px-2 py-1 z-50">
       <audio
         ref={audioRef}
         onTimeUpdate={handleTimeUpdate}
         onEnded={nextTrack}
       />
 
-      <div className="container mx-auto flex items-center gap-2">
-        <div className="flex items-center gap-2 min-w-0 flex-1 md:flex-none md:w-48">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+        <div className="flex items-center gap-2 w-full sm:w-48 order-1 sm:order-none">
           <div className="w-8 h-8 bg-zinc-800/50 rounded flex-shrink-0" />
-          <div className="min-w-0 hidden sm:block">
-            <div className="font-medium text-sm truncate">
+          <div className="min-w-0 truncate">
+            <div className="font-medium text-sm truncate max-w-[150px]">
               {currentTrack?.title || 'No track selected'}
             </div>
-            <div className="text-xs text-zinc-400 truncate">
+            <div className="text-xs text-zinc-400 truncate max-w-[150px]">
               {currentTrack?.artist || ''}
             </div>
           </div>
         </div>
 
-        <div className="flex-1 max-w-2xl">
+        <div className="flex-1 max-w-2xl order-3 sm:order-none w-full">
           <div className="flex items-center justify-center gap-2">
             <button
               onClick={previousTrack}
               className="text-zinc-400 hover:text-primary-400 transition-colors p-1"
-              aria-label={
-                language === 'en' ? 'Previous track' : 'Piste précédente'
-              }
+              aria-label={language === 'en' ? 'Previous track' : 'Piste précédente'}
             >
               <SkipBack size={16} />
             </button>
@@ -144,15 +137,7 @@ const AudioPlayer = () => {
             <button
               onClick={togglePlay}
               className="w-8 h-8 rounded-full bg-primary-500 text-black flex items-center justify-center hover:bg-primary-400 transition-colors"
-              aria-label={
-                isPlaying
-                  ? language === 'en'
-                    ? 'Pause'
-                    : 'Pause'
-                  : language === 'en'
-                  ? 'Play'
-                  : 'Lecture'
-              }
+              aria-label={isPlaying ? (language === 'en' ? 'Pause' : 'Pause') : (language === 'en' ? 'Play' : 'Lecture')}
             >
               {isPlaying ? <Pause size={16} /> : <Play size={16} />}
             </button>
@@ -184,19 +169,11 @@ const AudioPlayer = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-1 w-24">
+        <div className="hidden sm:flex items-center gap-1 w-24 order-2 sm:order-none">
           <button
             onClick={toggleMute}
             className="text-zinc-400 hover:text-primary-400 transition-colors p-1"
-            aria-label={
-              isMuted
-                ? language === 'en'
-                  ? 'Unmute'
-                  : 'Activer le son'
-                : language === 'en'
-                ? 'Mute'
-                : 'Couper le son'
-            }
+            aria-label={isMuted ? (language === 'en' ? 'Unmute' : 'Activer le son') : (language === 'en' ? 'Mute' : 'Couper le son')}
           >
             {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
           </button>

@@ -56,7 +56,8 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
         .from('tracks')
         .select('*')
         .order('created_at');
-
+      console.log(error);
+      console.log(data);
       if (error) throw error;
       return data as Track[];
     },

@@ -11,7 +11,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            'https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGguanBnIiwiaWF0IjoxNzM5MDUzMTk0LCJleHAiOjE3NzA1ODkxOTR9.2gP6RHQZwK_NOdPeEojXY9iMpNpxd78q9mfsDw_bGCA',
+            'https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledrro_pic5.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2IwOGExZWYzLWExMzAtNGQxYi05NDIxLThjYTUwNzY0NTkxYyJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcnJvX3BpYzUuanBnIiwiaWF0IjoxNzQ1NjExMDc4LCJleHAiOjE5MDMyOTEwNzh9.gEhBvA_4iw1ejcEzPUtFHBAO6WdXLPxlUXaKqOyy5Ho',
           width: '400px',
           height: 'auto',
           margin: 'auto',
