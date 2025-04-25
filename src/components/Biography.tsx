@@ -5,15 +5,15 @@ const Biography = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="biography" className="py-20 bg-section-pattern">
-      <div className="container mx-auto px-4">
+    <section className="pt-20 min-h-screen bg-section-pattern">
+      <div className="container mx-auto px-4 py-12">
         <h2 className="text-4xl font-bold mb-12 text-center">{t('bio.title')}</h2>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?q=80&w=2070" 
-              alt="Stéphane LE DRO performing"
+              src="https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_le_dro_tenor_plouescat.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVfZHJvX3Rlbm9yX3Bsb3Vlc2NhdC5qcGciLCJpYXQiOjE3NDIwNDgyOTYsImV4cCI6MTg5OTcyODI5Nn0.Ckz-bPI-P9aCnqjxpgROYDarXmpvOkv9fjH4GiaxA54" 
+              alt="Stéphane LE&nbsp;DRO performing"
               className="rounded-lg shadow-xl"
             />
           </div>

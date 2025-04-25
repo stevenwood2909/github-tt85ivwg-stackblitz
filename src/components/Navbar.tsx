@@ -22,8 +22,8 @@ const Navbar = () => {
     <nav className="fixed w-full bg-black/90 backdrop-blur-sm z-40">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold">
-            Stéphane LE DRO
+          <Link to="/" className="text-2xl font-bold whitespace-nowrap">
+            Stéphane&nbsp;LE&nbsp;DRO
           </Link>
           
           {/* Desktop Navigation */}
@@ -81,4 +81,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar
+export default Navbar;
