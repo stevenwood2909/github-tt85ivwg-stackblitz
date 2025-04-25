@@ -41,6 +41,9 @@ const translations = {
     'projects.badume.role': 'Saxophonist, Arranger',
     'projects.knorst.description': 'A contemporary jazz trio exploring the boundaries between traditional and modern jazz expressions.',
     'projects.knorst.role': 'Clarinetist, Composer',
+'projects.jimpoleya.description': 'Collaboration with Drummer Jimmy Poleya and his soul/funk collective bands : "Electrik City Funk" and "Funny vibes", who perpetuate the hits of soul and funk music.',
+    'projects.jimpoleya.role': 'Saxophonist',
+    
 
     // Video
     'video.title': 'Video',
@@ -106,6 +109,8 @@ const translations = {
     'projects.badume.role': 'Saxophoniste, Arrangeur',
     'projects.knorst.description': 'Un trio de jazz contemporain explorant les frontières entre les expressions jazz traditionnelles et modernes.',
     'projects.knorst.role': 'Clarinettiste, Compositeur',
+    'projects.jimpoleya.description': 'Collaboration avec le batteur Jimmy Poleya et ses collectifs de soul/funk : "Electrik City Funk" et "Funny vibes", qui perpétuent les hits de la soul et funk music.',
+    'projects.jimpoleya.role': 'Saxophoniste',
 
     // Video
     'video.title': 'Vidéo',

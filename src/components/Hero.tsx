@@ -11,7 +11,7 @@ const Hero = () => {
         className="absolute object-fit bg-[auto_50%] inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            'url(https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGguanBnIiwiaWF0IjoxNzM5MDUzMTk0LCJleHAiOjE3NzA1ODkxOTR9.2gP6RHQZwK_NOdPeEojXY9iMpNpxd78q9mfsDw_bGCA)',
+            'url(https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledrro_pic5.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2IwOGExZWYzLWExMzAtNGQxYi05NDIxLThjYTUwNzY0NTkxYyJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcnJvX3BpYzUuanBnIiwiaWF0IjoxNzQ1NjE0MTk5LCJleHAiOjE5MDMyOTQxOTl9.jm9U2-dS6moaFavawdVfZY4CQnuknhww85xyv-9uVDE)',
         }}
       >
         <div className="absolute inset-0 bg-black/50" />

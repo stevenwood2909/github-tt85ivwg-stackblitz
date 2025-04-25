@@ -41,6 +41,15 @@ const Projects = () => {
     },
     {
       id:4,
+      title: "Jim Poleya groups",
+      description: t('projects.jimpoleya.description'),
+      image: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?q=80&w=1974",
+      year: "2010-2015",
+      role: t('projects.jimpoleya.role'),
+      link: "https://www.youtube.com/watch?v=YhMgUTvV4XY"
+    },
+    {
+      id:5,
       title: "Mahmoud Ahmed & Badume's Band",
       description: t('projects.badume.description'),
       image: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?q=80&w=1974",
