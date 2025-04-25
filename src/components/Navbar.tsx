@@ -22,12 +22,12 @@ const Navbar = () => {
     <nav className="fixed w-full bg-black/90 backdrop-blur-sm z-40">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold whitespace-nowrap">
-            Stéphane&nbsp;LE&nbsp;DRO
+          <Link to="/" className="text-xl font-bold whitespace-nowrap">
+            Stéphane&nbsp;LE&nbsp;DRO&nbsp;
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -39,7 +39,9 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
-            <LanguageSwitcher />
+            <div className="pl-2 border-l border-zinc-700">
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

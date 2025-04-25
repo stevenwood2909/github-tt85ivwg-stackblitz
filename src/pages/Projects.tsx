@@ -22,6 +22,8 @@ const Projects = () => {
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledro_solo_reduc_landscape.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcm9fc29sb19yZWR1Y19sYW5kc2NhcGUucG5nIiwiaWF0IjoxNzQxNzA5OTM3LCJleHAiOjE4OTkzODk5Mzd9.6rfZnMzoq49OCVuyU827LH6khfdbV4gOBo09KZ5mjsE",
       year: "2020-Present",
       role: t('projects.solo.role'),
+      link: "https://www.youtube.com/embed/2Dm9-lGBGds?autoplay=1&cc_load_policy=3"
+
     },
     {    id: 2,
       title: "SOUL LAB",
@@ -43,10 +45,10 @@ const Projects = () => {
       id:4,
       title: "Jim Poleya groups",
       description: t('projects.jimpoleya.description'),
-      image: "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?q=80&w=1974",
-      year: "2010-2015",
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/jimpoleya.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2IwOGExZWYzLWExMzAtNGQxYi05NDIxLThjYTUwNzY0NTkxYyJ9.eyJ1cmwiOiJpbWFnZXMvamltcG9sZXlhLmpwZyIsImlhdCI6MTc0NTYxNjc4NCwiZXhwIjoxOTAzMjk2Nzg0fQ.f4Vk7GnrNz8WhPekB4ReX0-V2YnoEblxqM06L1msWJg",
+      year: "2010-present",
       role: t('projects.jimpoleya.role'),
-      link: "https://www.youtube.com/watch?v=YhMgUTvV4XY"
+      link: "https://www.youtube.com/watch?v=9NJb52L17lE&list=PL90jIJ2vHeIAiNXvVwJu_OILWLW9DWeV7&index=2"
     },
     {
       id:5,
