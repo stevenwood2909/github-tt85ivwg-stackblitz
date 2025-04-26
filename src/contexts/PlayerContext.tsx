@@ -31,6 +31,8 @@ interface PlayerContextType {
   toggleMute: () => void;
   currentTrackProgress: number;
   setCurrentTrackProgress: (currentTrackProgress: number) => void;
+  playTrack: (track: Track) => void;
+  pauseTrack: () => void;
 }
 
 const PlayerContext = createContext<PlayerContextType | undefined>(undefined);
@@ -93,6 +95,22 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
+  const playTrack = (track: Track) => {
+    const trackIndex = tracks.findIndex(t => t.id === track.id);
+    setCurrentTrackIndex(trackIndex);
+    setIsPlaying(true);
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
+
+  const pauseTrack = () => {
+    setIsPlaying(false);
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+  };
+
   const nextTrack = () => {
     if (currentTrackIndex < tracks.length - 1) {
       setCurrentTrackIndex(currentTrackIndex + 1);
@@ -105,7 +123,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
         audioRef.current.play();
       }
     }
-    // reset ttrack position
+    // reset track position
     setCurrentTrackProgress(0);
   };
 
@@ -121,7 +139,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
         audioRef.current.play();
       }
     }
-    // reset ttrack position
+    // reset track position
     setCurrentTrackProgress(0);
   };
 
@@ -142,8 +160,6 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
       console.log(' srcCurrentposition ==> ' + audioRef.current.currentTime);
     }
   };
-
-
 
   const toggleMute = () => {
     setIsMuted(!isMuted);
@@ -169,6 +185,8 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
         toggleMute,
         currentTrackProgress,
         setCurrentTrackProgress: handleTrackPosition,
+        playTrack,
+        pauseTrack,
       }}
     >
       <audio

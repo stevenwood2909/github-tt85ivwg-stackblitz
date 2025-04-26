@@ -20,7 +20,7 @@ const Projects = () => {
       title: "Solo Project",
       description: t('projects.solo.description'),
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledro_solo_reduc_landscape.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcm9fc29sb19yZWR1Y19sYW5kc2NhcGUucG5nIiwiaWF0IjoxNzQxNzA5OTM3LCJleHAiOjE4OTkzODk5Mzd9.6rfZnMzoq49OCVuyU827LH6khfdbV4gOBo09KZ5mjsE",
-      year: "2020-Present",
+      year: "2024-Present",
       role: t('projects.solo.role'),
       link: "https://www.youtube.com/embed/2Dm9-lGBGds?autoplay=1&cc_load_policy=3"
 
@@ -37,7 +37,7 @@ const Projects = () => {
       id: 3,
       title: "Yvan Knorst Trio",
       description: t('projects.knorst.description'),
-      image: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=2072",
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_trio_KLDD_reduc.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2IwOGExZWYzLWExMzAtNGQxYi05NDIxLThjYTUwNzY0NTkxYyJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fdHJpb19LTEREX3JlZHVjLmpwZyIsImlhdCI6MTc0NTY2MDczNSwiZXhwIjoxNzc3MTk2NzM1fQ.eNkynZXbN-nDdDATVIPPKXvhR_uTysTy44kajJwA-mo",
       year: "2022-Present",
       role: t('projects.knorst.role'),
     },
