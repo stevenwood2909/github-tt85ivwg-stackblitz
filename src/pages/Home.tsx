@@ -12,7 +12,7 @@ const Home = () => {
         className="absolute inset-0 bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage:
-            'url(https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledrro_pic5.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2IwOGExZWYzLWExMzAtNGQxYi05NDIxLThjYTUwNzY0NTkxYyJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcnJvX3BpYzUuanBnIiwiaWF0IjoxNzQ1NjE4MzEyLCJleHAiOjE3NzcxNTQzMTJ9.Wpt4kV58-6KgYlhBCmffUBhyhp7eZTjoyvsidhl3gxs)',
+            'url(https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledrro_pic5.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mNGVmN2U0MS0zNmJlLTQ1YjEtOGRmZC01YmRkYTM5ZGJiZmQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcnJvX3BpYzUuanBnIiwiaWF0IjoxNzUzODg1OTk2LCJleHAiOjE4MTY5NTc5OTZ9.BLBHQObLtkfEAq2Ie0gXb5UO_-k2ArZ3xe1EiWbIzvM)',
         }}
       >
         <div className="absolute inset-0 bg-black/50" />

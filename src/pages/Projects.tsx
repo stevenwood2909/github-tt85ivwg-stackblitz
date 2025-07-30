@@ -37,7 +37,7 @@ const Projects = () => {
       id: 3,
       title: "Yvan Knorst Trio",
       description: t('projects.knorst.description'),
-      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_trio_KLDD_reduc.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2IwOGExZWYzLWExMzAtNGQxYi05NDIxLThjYTUwNzY0NTkxYyJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fdHJpb19LTEREX3JlZHVjLmpwZyIsImlhdCI6MTc0NTY2MDczNSwiZXhwIjoxNzc3MTk2NzM1fQ.eNkynZXbN-nDdDATVIPPKXvhR_uTysTy44kajJwA-mo",
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_trio_KLDD_reduc.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mNGVmN2U0MS0zNmJlLTQ1YjEtOGRmZC01YmRkYTM5ZGJiZmQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fdHJpb19LTEREX3JlZHVjLmpwZyIsImlhdCI6MTc1Mzg4NTg3NCwiZXhwIjoxODE2OTU3ODc0fQ.ykRaIYw-hEnthieJwC_xdJZDFo6BX1GUkWzvnDWwbeo",
       year: "2022-Present",
       role: t('projects.knorst.role'),
     },
@@ -45,7 +45,7 @@ const Projects = () => {
       id:4,
       title: "Jim Poleya groups",
       description: t('projects.jimpoleya.description'),
-      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/jimpoleya.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2IwOGExZWYzLWExMzAtNGQxYi05NDIxLThjYTUwNzY0NTkxYyJ9.eyJ1cmwiOiJpbWFnZXMvamltcG9sZXlhLmpwZyIsImlhdCI6MTc0NTYxNjc4NCwiZXhwIjoxOTAzMjk2Nzg0fQ.f4Vk7GnrNz8WhPekB4ReX0-V2YnoEblxqM06L1msWJg",
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/jimpoleya.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mNGVmN2U0MS0zNmJlLTQ1YjEtOGRmZC01YmRkYTM5ZGJiZmQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvamltcG9sZXlhLmpwZyIsImlhdCI6MTc1Mzg4NjA4OCwiZXhwIjoxODE2OTU4MDg4fQ.Q51hPU6Rtk8iylglueQ6siU8xD-Q0eUTUWRzKTvonqk",
       year: "2010-present",
       role: t('projects.jimpoleya.role'),
       link: "https://www.youtube.com/watch?v=9NJb52L17lE&list=PL90jIJ2vHeIAiNXvVwJu_OILWLW9DWeV7&index=2"
@@ -54,7 +54,7 @@ const Projects = () => {
       id:5,
       title: "Mahmoud Ahmed & Badume's Band",
       description: t('projects.badume.description'),
-      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/mahmoud-ahmed.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2IwOGExZWYzLWExMzAtNGQxYi05NDIxLThjYTUwNzY0NTkxYyJ9.eyJ1cmwiOiJpbWFnZXMvbWFobW91ZC1haG1lZC53ZWJwIiwiaWF0IjoxNzQ1NjE4ODgwLCJleHAiOjE3NzcxNTQ4ODB9.2SyAVojkQtxUZ-D_BIMho9wWi7QcCkPMZ27GnNe5nxw",
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/mahmoud-ahmed.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mNGVmN2U0MS0zNmJlLTQ1YjEtOGRmZC01YmRkYTM5ZGJiZmQiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvbWFobW91ZC1haG1lZC53ZWJwIiwiaWF0IjoxNzUzODg2MTM2LCJleHAiOjE4MTY5NTgxMzZ9.iyKihIkzDUWnVfOOi28xFiFWK08yw9vRwsrStQKcmwE",
       year: "2010-2015",
       role: t('projects.badume.role'),
       link: "https://www.youtube.com/watch?v=YhMgUTvV4XY"
