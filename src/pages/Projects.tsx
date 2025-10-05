@@ -12,8 +12,8 @@ interface Project {
 }
 
 const Projects = () => {
-  const { t } = useLanguage();
-
+  const { tWithLineBreaks } = useLanguage();
+  const { t} =  useLanguage();
   const projects: Project[] = [
     {
       id: 1,
@@ -27,7 +27,8 @@ const Projects = () => {
     },
     {    id: 2,
       title: "SOUL LAB",
-      description: t('projects.soullab.description'),
+      // to allow line breaks we use replace function
+      description: t('projects.soullab.description').replace(/\\n/g, "\n"),
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_SOUL_LAB_web.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fU09VTF9MQUJfd2ViLmpwZyIsImlhdCI6MTc0Mjg1Mjk4MCwiZXhwIjoxOTAwNTMyOTgwfQ.pjvIMC2lAX_pufQwL0hg4yrOw-fI4zMqnBA_SfBKbLU",
       year: "2023-Present",
       role: t('projects.soullab.role'),
@@ -37,15 +38,16 @@ const Projects = () => {
       id: 3,
       title: "Yvan Knorst Trio",
       description: t('projects.knorst.description'),
-      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_trio_KLDD_reduc.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5Xzk3OWVkMTgyLTRiOGUtNDAzMi05NWU4LWJlZDVlYThiNDQ2YSJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fdHJpb19LTEREX3JlZHVjLmpwZyIsImlhdCI6MTc0Nzg2NDA0OCwiZXhwIjoxOTA1NTQ0MDQ4fQ.Am41ijH8QdIQ-t1p7Xv-SuIEQJ_O6b_k7OAjwJPa_6Y",
-      year: "2022-Present",
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_trio_KLDD_reduc.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fdHJpb19LTEREX3JlZHVjLmpwZyIsImlhdCI6MTc1OTY3MDgzOSwiZXhwIjoxODIyNzQyODM5fQ.Sepyqhi9Esc-6tWrAbpj9HXNbBwGE9EnjF7gtO5A6g0",
+      year: "2022-2025",
       role: t('projects.knorst.role'),
+      link : "https://www.youtube.com/watch?v=dRLmGg-xQu8",
     },
     {
       id:4,
       title: "Jim Poleya groups",
       description: t('projects.jimpoleya.description'),
-      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/jimpoleya.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5Xzk3OWVkMTgyLTRiOGUtNDAzMi05NWU4LWJlZDVlYThiNDQ2YSJ9.eyJ1cmwiOiJpbWFnZXMvamltcG9sZXlhLmpwZyIsImlhdCI6MTc0Nzg2NDIzNCwiZXhwIjoxOTA1NTQ0MjM0fQ.1igojVi4N-pjwYwrzSSDxPnqJpTaHC0i74H3zlyTcdc",
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/jimpoleya.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvamltcG9sZXlhLmpwZyIsImlhdCI6MTc1OTY3MDczOCwiZXhwIjoxODIyNzQyNzM4fQ.WTj7IoOQ2LbFhKtf1voGN8jqGhWOh1GDiAXbk7T_8ak",
       year: "2010-present",
       role: t('projects.jimpoleya.role'),
       link: "https://www.youtube.com/watch?v=9NJb52L17lE&list=PL90jIJ2vHeIAiNXvVwJu_OILWLW9DWeV7&index=2"
@@ -54,7 +56,7 @@ const Projects = () => {
       id:5,
       title: "Mahmoud Ahmed & Badume's Band",
       description: t('projects.badume.description'),
-      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/mahmoud-ahmed.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5Xzk3OWVkMTgyLTRiOGUtNDAzMi05NWU4LWJlZDVlYThiNDQ2YSJ9.eyJ1cmwiOiJpbWFnZXMvbWFobW91ZC1haG1lZC53ZWJwIiwiaWF0IjoxNzQ3ODY0MjY1LCJleHAiOjE5MDU1NDQyNjV9.Jlz045qbSnaJM7QY1iq5GFBoVLc3SkcFBKnvn0lm_BQ",
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/mahmoud-ahmed.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvbWFobW91ZC1haG1lZC53ZWJwIiwiaWF0IjoxNzU5NjcwNzg2LCJleHAiOjE4MjI3NDI3ODZ9.E-leYH9pdEvupC6m63UFPILKcVFUkPJG303gTrx9S0k",
       year: "2010-2015",
       role: t('projects.badume.role'),
       link: "https://www.youtube.com/watch?v=YhMgUTvV4XY"
@@ -86,7 +88,7 @@ const Projects = () => {
                     <h2 className="text-2xl font-bold">{project.title}</h2>
                     <p className="text-yellow-500">{project.role}</p>
                     <p className="text-sm text-zinc-400">{project.year}</p>
-                    <p className="text-zinc-300">{project.description}</p>
+                    <p className="text-zinc-300 whitespace-pre-line">{project.description}</p>
                     
                     {project.link && (
                       <a 

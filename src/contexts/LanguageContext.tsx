@@ -6,6 +6,7 @@ interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  tWithLineBreaks: (key: string) => React.ReactNode;
 }
 
 const translations = {
@@ -39,7 +40,7 @@ const translations = {
     'projects.soullab.role': 'Saxophonist, Composer',
     'projects.badume.description': 'Collaboration with legendary Ethiopian singer Mahmoud Ahmed, performing traditional and modern Ethiopian music.',
     'projects.badume.role': 'Saxophonist, Arranger',
-    'projects.knorst.description': 'A contemporary jazz trio exploring the boundaries between traditional and modern jazz expressions.',
+    'projects.knorst.description': 'Collaboration with guitarist Yvan Knorst and violist Aude-Marie Duperret.',
     'projects.knorst.role': 'Clarinetist, Composer',
 'projects.jimpoleya.description': 'Collaboration with Drummer Jimmy Poleya and his soul/funk collective bands : "Electrik City Funk" and "Funny vibes", who perpetuate the hits of soul and funk music.',
     'projects.jimpoleya.role': 'Saxophonist',
@@ -75,7 +76,7 @@ const translations = {
     'contact.send': 'Send Message',
 
     // Footer
-    'footer.rights': '© 2025 Stéphane LE&nbsp;DRO. All rights reserved.',
+    'footer.rights': '© 2026 Stéphane LE&nbsp;DRO. All rights reserved.',
   },
   fr: {
     // Navigation
@@ -103,11 +104,11 @@ const translations = {
     'projects.watchVideo': 'Voir la Vidéo',
     'projects.solo.description': 'Une performance solo unique combinant clarinette basse avec looping en direct et diffusion quadraphonique, créant des paysages musicaux immersifs.',
     'projects.solo.role': 'Artiste Solo, Compositeur',
-    'projects.soullab.description': "SOUL LAB est un trio de musiciens français.  \nSax ténor : Stéphane LE&nbsp;DRO   \nOrgue Hammond & Moog : Olivier GUÉNÉGO   \nBatterie : Tony MONTFORT   \nIls distillent une musique groove inspirée des grands noms de la soul et du funk des années 70, et aiment s'approprier les standards de leurs maîtres que sont James Brown, Jimmy Smith ou encore Grant Green, en expérimentant de nouvelles sonorités, toujours au service du groove! ",
+    'projects.soullab.description': "SOUL LAB est un trio de musiciens français. \nSax ténor : Stéphane LE\u00A0DRO   \nOrgue Hammond & Moog : Olivier GUÉNÉGO   \nBatterie : Tony MONTFORT   \nIls distillent une musique groove inspirée des grands noms de la soul et du funk des années 70, et aiment s\'approprier les standards de leurs maîtres que sont James Brown, Jimmy Smith ou encore Grant Green, en expérimentant de nouvelles sonorités, toujours au service du groove! ",
     'projects.soullab.role': 'Saxophoniste, Compositeur',
     'projects.badume.description': 'Collaboration avec le légendaire chanteur éthiopien Mahmoud Ahmed, interprétant de la musique éthiopienne traditionnelle et moderne.',
     'projects.badume.role': 'Saxophoniste',
-    'projects.knorst.description': 'Un trio de jazz contemporain explorant les frontières entre les expressions jazz traditionnelles et modernes.',
+    'projects.knorst.description': 'Collaboration avec le guitariste Yvan Knorst et l\'altiste Aude-MArie Duperret.',
     'projects.knorst.role': 'Clarinettiste, Compositeur',
     'projects.jimpoleya.description': 'Collaboration avec le batteur Jimmy Poleya et ses collectifs de soul/funk : "Electrik City Funk" et "Funny vibes", qui perpétuent les hits de la soul et funk music.',
     'projects.jimpoleya.role': 'Saxophoniste',
@@ -141,7 +142,7 @@ const translations = {
     'contact.send': 'Envoyer',
 
     // Footer
-    'footer.rights': '© 2025 Stéphane LE&nbsp;DRO. Tous droits réservés.',
+    'footer.rights': '© 2026 Stéphane LE&nbsp;DRO. Tous droits réservés.',
   },
 };
 
@@ -154,11 +155,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     return translations[language][key as keyof (typeof translations)['fr']] || key;
   };
 
-  return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
-      {children}
-    </LanguageContext.Provider>
-  );
+  const tWithLineBreaks = (key: string): React.ReactNode => { const raw = t(key).replace(/\\n/g, "\n"); 
+  // normalise \\n → \n 
+  const parts = raw.split("\n"); return parts.map((line, i) => ( <React.Fragment key={i}> {line} {i < parts.length - 1 && <br />} </React.Fragment> )); };
+
+return ( <LanguageContext.Provider value={{ language, setLanguage, t, tWithLineBreaks }}> {children} </LanguageContext.Provider> );
 }
 
 export function useLanguage() {
