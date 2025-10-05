@@ -168,12 +168,6 @@ const AudioPlayer = () => {
                 >
                   <SkipForward size={16} />
                 </button>
-                <button
-                  onClick={toggleMute}
-                  className="text-zinc-400 hover:text-primary-400 transition-colors p-1 sm:hidden"
-                >
-                  {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
-                </button>
               </div>
             </div>
 
@@ -192,6 +186,24 @@ const AudioPlayer = () => {
               <span className="text-xs text-zinc-400 w-8">
                 {formatTime(duration)}
               </span>
+            </div>
+
+            <div className="hidden sm:inline flex items-center gap-2">
+              <button
+                onClick={toggleMute}
+                className="text-zinc-400 hover:text-primary-400 transition-colors p-1"
+              >
+                {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+              </button>
+              <CustomSlider
+                value={volume}
+                min={0}
+                max={1}
+                step={0.01}
+                onChange={handleVolumeChange}
+                className="flex-1"
+                size="small"
+              />
             </div>
           </div>
         )}
