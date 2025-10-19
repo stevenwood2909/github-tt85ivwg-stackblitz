@@ -188,10 +188,10 @@ const AudioPlayer = () => {
               </span>
             </div>
 
-            <div className="hidden sm:inline flex items-center gap-2">
+            <div className="hidden sm:flex items-center gap-2 max-w-[200px]">
               <button
                 onClick={toggleMute}
-                className="text-zinc-400 hover:text-primary-400 transition-colors p-1"
+                className="text-zinc-400 hover:text-primary-400 transition-colors p-1 flex-shrink-0"
               >
                 {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
               </button>
