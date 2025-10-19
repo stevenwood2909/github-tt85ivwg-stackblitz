@@ -53,18 +53,10 @@ const AudioPlayer = () => {
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
   const { language } = useLanguage();
 
   const handleVolumeChange = (event: Event, newValue: number | number[]) => {
     setVolume(newValue as number);
-  };
-
-  const handleTimeUpdate = () => {
-    if (audioRef.current) {
-      setProgress(audioRef.current.currentTime);
-      setDuration(audioRef.current.duration);
-    }
   };
 
   const formatTime = (time: number) => {
@@ -74,48 +66,40 @@ const AudioPlayer = () => {
   };
 
   const handleSeeking = (newTime: any) => {
-    if (audioRef.current) {
-      audioRef.current.currentTime = newTime as number;
+    // Calculate percentage and use context method
+    if (currentTrack && duration) {
+      const percentage = ((newTime as number) / duration) * 100;
+      setCurrentTrackProgress(percentage);
     }
   };
 
   useEffect(() => {
-    if (currentTrack && audioRef.current) {
-      if (audioRef.current.src !== currentTrack.audio_url) {
-        audioRef.current.src = currentTrack.audio_url;
-      }
+    // Get the audio element from the PlayerContext
+    const audioElement = document.querySelector('audio');
+    if (!audioElement) return;
 
-      if (isPlaying) {
-        audioRef.current.play().catch((error) => {
-          console.error('Error playing audio:', error);
-        });
-      } else {
-        audioRef.current.pause();
-      }
-    }
-  }, [currentTrack, isPlaying]);
+    const handleTimeUpdate = () => {
+      setProgress(audioElement.currentTime);
+      setDuration(audioElement.duration);
+    };
 
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume;
-      audioRef.current.muted = isMuted;
-    }
-  }, [volume, isMuted]);
+    audioElement.addEventListener('timeupdate', handleTimeUpdate);
+    audioElement.addEventListener('loadedmetadata', handleTimeUpdate);
+
+    return () => {
+      audioElement.removeEventListener('timeupdate', handleTimeUpdate);
+      audioElement.removeEventListener('loadedmetadata', handleTimeUpdate);
+    };
+  }, [currentTrack]);
 
   if (!currentTrack) return null;
 
   return (
-    <div 
+    <div
       className={`fixed bottom-0 left-0 right-0 bg-zinc-900/80 backdrop-blur-md border-t border-zinc-800/50 transition-all duration-300 ${
         isCollapsed ? 'h-14' : 'h-auto'
       } z-50`}
     >
-      <audio
-        ref={audioRef}
-        onTimeUpdate={handleTimeUpdate}
-        onEnded={nextTrack}
-      />
-
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
         className="absolute top-2 right-2 text-zinc-400 hover:text-primary-400 transition-colors"
