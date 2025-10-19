@@ -112,35 +112,45 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const nextTrack = () => {
+    const wasPlaying = isPlaying;
     if (currentTrackIndex < tracks.length - 1) {
       setCurrentTrackIndex(currentTrackIndex + 1);
-      if (isPlaying && audioRef.current) {
-        audioRef.current.play();
-      }
     } else {
       setCurrentTrackIndex(0);
-      if (isPlaying && audioRef.current) {
-        audioRef.current.play();
-      }
     }
     // reset track position
     setCurrentTrackProgress(0);
+
+    // Auto-play next track if currently playing
+    if (wasPlaying) {
+      setIsPlaying(true);
+      setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.play();
+        }
+      }, 100);
+    }
   };
 
   const previousTrack = () => {
+    const wasPlaying = isPlaying;
     if (currentTrackIndex > 0) {
       setCurrentTrackIndex(currentTrackIndex - 1);
-      if (isPlaying && audioRef.current) {
-        audioRef.current.play();
-      }
     } else {
       setCurrentTrackIndex(tracks.length - 1);
-      if (isPlaying && audioRef.current) {
-        audioRef.current.play();
-      }
     }
     // reset track position
     setCurrentTrackProgress(0);
+
+    // Auto-play previous track if currently playing
+    if (wasPlaying) {
+      setIsPlaying(true);
+      setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.play();
+        }
+      }, 100);
+    }
   };
 
   const handleVolumeChange = (newVolume: number) => {

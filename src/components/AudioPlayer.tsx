@@ -65,11 +65,10 @@ const AudioPlayer = () => {
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   };
 
-  const handleSeeking = (newTime: any) => {
-    // Calculate percentage and use context method
-    if (currentTrack && duration) {
-      const percentage = ((newTime as number) / duration) * 100;
-      setCurrentTrackProgress(percentage);
+  const handleSeeking = (event: Event, newTime: number | number[]) => {
+    const audioElement = document.querySelector('audio');
+    if (audioElement) {
+      audioElement.currentTime = newTime as number;
     }
   };
 
@@ -164,7 +163,7 @@ const AudioPlayer = () => {
                   min={0}
                   max={duration || 0}
                   value={progress}
-                  onChange={(e, value) => handleSeeking(value)}
+                  onChange={handleSeeking}
                   className="flex-1"
                   size="small"
                 />
