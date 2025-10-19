@@ -171,39 +171,41 @@ const AudioPlayer = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
-              <span className="text-xs text-zinc-400 w-8 text-right">
-                {formatTime(progress)}
-              </span>
-              <CustomSlider
-                min={0}
-                max={duration || 0}
-                value={progress}
-                onChange={(e, value) => handleSeeking(value)}
-                className="flex-1"
-                size="small"
-              />
-              <span className="text-xs text-zinc-400 w-8">
-                {formatTime(duration)}
-              </span>
-            </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 flex-1">
+                <span className="text-xs text-zinc-400 w-8 text-right">
+                  {formatTime(progress)}
+                </span>
+                <CustomSlider
+                  min={0}
+                  max={duration || 0}
+                  value={progress}
+                  onChange={(e, value) => handleSeeking(value)}
+                  className="flex-1"
+                  size="small"
+                />
+                <span className="text-xs text-zinc-400 w-8">
+                  {formatTime(duration)}
+                </span>
+              </div>
 
-            <div className="hidden sm:flex items-center gap-2 max-w-[200px]">
-              <button
-                onClick={toggleMute}
-                className="text-zinc-400 hover:text-primary-400 transition-colors p-1 flex-shrink-0"
-              >
-                {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
-              </button>
-              <CustomSlider
-                value={volume}
-                min={0}
-                max={1}
-                step={0.01}
-                onChange={handleVolumeChange}
-                className="flex-1"
-                size="small"
-              />
+              <div className="hidden sm:flex items-center gap-2 w-[200px]">
+                <button
+                  onClick={toggleMute}
+                  className="text-zinc-400 hover:text-primary-400 transition-colors p-1 flex-shrink-0"
+                >
+                  {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+                </button>
+                <CustomSlider
+                  value={volume}
+                  min={0}
+                  max={1}
+                  step={0.01}
+                  onChange={handleVolumeChange}
+                  className="flex-1"
+                  size="small"
+                />
+              </div>
             </div>
           </div>
         )}
