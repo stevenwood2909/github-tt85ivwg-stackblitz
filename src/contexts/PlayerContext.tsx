@@ -77,7 +77,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.currentTime = currentTrackProgress;
+      //audioRef.current.currentTime = currentTrackProgress;
       console.log(
         ' here srcCurrentposition ==> ' + audioRef.current.currentTime
       );
