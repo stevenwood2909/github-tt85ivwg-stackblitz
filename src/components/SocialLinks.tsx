@@ -15,7 +15,7 @@ const SocialLinks = () => {
     },
     {
       icon: <Youtube size={24} />,
-      href: 'https://youtube.com/@stephaneledro',
+      href: 'https://youtube.com/@stephaneledromusic',
       label: 'YouTube',
     },
     {

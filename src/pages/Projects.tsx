@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface Project {
@@ -12,7 +12,7 @@ interface Project {
 }
 
 const Projects = () => {
-  const { tWithLineBreaks } = useLanguage();
+  //const { tWithLineBreaks } = useLanguage();
   const { t} =  useLanguage();
   const projects: Project[] = [
     {
