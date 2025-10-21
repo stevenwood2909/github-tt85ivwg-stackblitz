@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SocialLinks from './SocialLinks';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -11,7 +12,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage:
-            'url(https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledrro_pic5.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2IwOGExZWYzLWExMzAtNGQxYi05NDIxLThjYTUwNzY0NTkxYyJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcnJvX3BpYzUuanBnIiwiaWF0IjoxNzQ1NjE0MTk5LCJleHAiOjE5MDMyOTQxOTl9.jm9U2-dS6moaFavawdVfZY4CQnuknhww85xyv-9uVDE)',
+            'url(https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledrro_pic8.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcnJvX3BpYzguanBnIiwiaWF0IjoxNzYxMDQ5NTcyLCJleHAiOjE3OTI1ODU1NzJ9.312uBadyY075ZKWeV7eF61RAFPZoMXphli_nn7YNVrE)',
         }}
       >
         <div className="absolute inset-0 bg-black/50" />
