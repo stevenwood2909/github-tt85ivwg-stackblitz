@@ -12,7 +12,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-top bg-no-repeat"
         style={{
           backgroundImage:
-            'url(https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledrro_pic8.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcnJvX3BpYzguanBnIiwiaWF0IjoxNzYxMDQ5NTcyLCJleHAiOjE3OTI1ODU1NzJ9.312uBadyY075ZKWeV7eF61RAFPZoMXphli_nn7YNVrE)',
+            'url(https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledro_home.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcm9faG9tZS5qcGciLCJpYXQiOjE3NjExNDUwNTEsImV4cCI6MTc5MjY4MTA1MX0.6BvqtB09C7wJUt9OwVIuQ85_1j8btE3Ql1yGugZOjoY)',
         }}
       >
         <div className="absolute inset-0 bg-black/50" />
