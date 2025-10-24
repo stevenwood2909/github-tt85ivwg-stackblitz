@@ -19,10 +19,10 @@ const Hero = () => {
       </div>
 
       <div className="relative h-full flex flex-col justify-center items-center text-center px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 titre-decale" >
           Stéphane&nbsp;LE_DRO
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-zinc-200">
+        <p className="text-xl md:text-2xl mb-8 text-zinc-200 texte-tresbas">
           {t('hero.title')}
         </p>
       </div>

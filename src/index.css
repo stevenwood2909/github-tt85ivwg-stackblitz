@@ -44,3 +44,49 @@
 ::-webkit-scrollbar-thumb {
   @apply bg-zinc-700 rounded-full hover:bg-zinc-600 transition-colors;
 }
+
+.titre-decale {
+  
+  /* Par défaut, centré */
+  text-align: center;
+  transform: translateX(0);
+  transform: translateY(0);
+
+  transition: transform 0.3s; /* Optionnel : pour un décalage fluide */
+}
+
+/* Pour les écrans plus larges (non mobiles) */
+@media (min-width: 768px) {
+  .titre-decale {
+    /*background-position: top center;*/
+    transform: translateX(-20%);
+    transform: translateY(20%);
+
+    text-align: left; /* facultatif selon l'effet souhaité */
+  }
+}
+
+.texte-bas {
+  position: absolute;
+  top: 30vh;           /* commence à la moitié de la hauteur de la fenêtre */
+  height: 50vh;        /* occupe la moitié inférieure */
+  width: 100%;         /* prend toute la largeur */
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement dans la moitié basse */
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.texte-tresbas {
+  position: absolute;
+  top: 40vh;           /* commence à la moitié de la hauteur de la fenêtre */
+  height: 50vh;        /* occupe la moitié inférieure */
+  width: 100%;         /* prend toute la largeur */
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement dans la moitié basse */
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}

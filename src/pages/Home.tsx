@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import SocialLinks from '../components/SocialLinks';
@@ -6,6 +6,13 @@ import SocialLinks from '../components/SocialLinks';
 const Home = () => {
   const { t } = useLanguage();
 
+  useEffect(() => {
+    // Scroll tout en bas au chargement
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'auto' // ou 'smooth' pour un défilement fluide
+    });
+  }, []);
   return (
     <div className="relative h-screen">
       <div
@@ -19,8 +26,8 @@ const Home = () => {
       </div>
 
       <div className="relative h-full flex flex-col justify-center items-center text-center px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">Stéphane&nbsp;LE&nbsp;DRO</h1>
-        <p className="text-xl md:text-2xl mb-8 text-zinc-200">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 titre-decale texte-bas">Stéphane&nbsp;LE&nbsp;DRO</h1>
+        <p className="text-xl md:text-2xl mb-8 text-zinc-200 titre-decale texte-tresbas">
           {t('hero.title')}
         </p>
       </div>
