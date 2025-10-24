@@ -10,7 +10,7 @@ const SocialLinks = () => {
     },
     {
       icon: <Instagram size={24} />,
-      href: 'https://instagram.com/stephaneledro',
+      href: 'https://instagram.com/steph.ledro',
       label: 'Instagram',
     },
     {
