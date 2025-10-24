@@ -25,10 +25,13 @@ const Concerts = () => {
   useEffect(() => {
     const fetchConcerts = async () => {
       try {
+
+        const today = new Date().toISOString().split('T')[0]; // 'date uniquement'
+
         const { data, error } = await supabase
           .from('concerts')
           .select('*')
-          .gte('date', new Date().toISOString())
+          .gte('date', today)
           .order('date', { ascending: true });
 
         if (error) throw error;
