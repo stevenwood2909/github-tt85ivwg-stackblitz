@@ -34,6 +34,7 @@ const translations = {
     // Projects
     'projects.title': 'Musical Projects',
     'projects.watchVideo': 'Watch Video',
+    'projects.more': 'More infos',
     'projects.solo.role': 'Solo artist, Composer',
     'projects.solo.description': 'A unique solo performance combining bass clarinet with live looping and quadraphonic sound diffusion, creating immersive musical landscapes.',
     'projects.soullab.description': "SOUL LAB is a trio of French musicians.  \nTenor sax: Stéphane LE&nbsp;DRO   \nHammond organ & Moog : Olivier GUÉNÉGO   \nDrums : Tony MONTFORT   \nThey distill groove music inspired by the great names of soul and funk from the 70s, and like to appropriate the standards of their masters such as James Brown, Jimmy Smith or Grant Green, by experimenting with new sounds, always in the service of the groove!",
@@ -102,6 +103,7 @@ const translations = {
     // Projects
     'projects.title': 'Projets Musicaux',
     'projects.watchVideo': 'Voir la Vidéo',
+    'projects.more': 'Plus d\'infos',
     'projects.solo.description': 'Une performance solo unique combinant clarinette basse avec looping en direct et diffusion quadraphonique, créant des paysages musicaux immersifs.',
     'projects.solo.role': 'Artiste Solo, Compositeur',
     'projects.soullab.description': "SOUL LAB est un trio de musiciens français. \nSax ténor : Stéphane LE\u00A0DRO   \nOrgue Hammond & Moog : Olivier GUÉNÉGO   \nBatterie : Tony MONTFORT   \nIls distillent une musique groove inspirée des grands noms de la soul et du funk des années 70, et aiment s\'approprier les standards de leurs maîtres que sont James Brown, Jimmy Smith ou encore Grant Green, en expérimentant de nouvelles sonorités, toujours au service du groove! ",

@@ -1,8 +1,15 @@
 import React from 'react';
 import { Facebook, Instagram, Youtube, Mail } from 'lucide-react';
 
-const SocialLinks = () => {
-  const socialLinks = [
+type SocialLinksProps = {
+  items?: string[]; // optional list of platform names to include
+  links?: Record<string, string>; // optional map: platform → href
+};
+
+const SocialLinks = ({ items, links }: SocialLinksProps)  => {
+
+
+  const defaultSocialLinks = [
     {
       icon: <Facebook size={24} />,
       href: 'https://facebook.com/stephaneledro',
@@ -25,9 +32,20 @@ const SocialLinks = () => {
     },
   ];
 
+  //  Filter by items (if provided)
+  let filtered = items ? defaultSocialLinks.filter(link => items.includes(link.label)) : defaultSocialLinks;
+
+  //  Override hrefs if `links` provided
+  if (links) {
+    filtered = filtered.map(link => ({
+      ...link,
+      href: links[link.label] ?? link.href, // use custom URL if available
+    }));
+  }
+
   return (
     <div className="absolute bottom-12 left-0 right-0 flex justify-center items-center space-x-6">
-      {socialLinks.map((link) => (
+      {filtered.map((link) => (
         <a
           key={link.label}
           href={link.href}

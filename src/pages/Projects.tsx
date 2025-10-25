@@ -9,6 +9,7 @@ interface Project {
   year: string;
   role: string;
   link?: string;
+  more?: string;
 }
 
 const Projects = () => {
@@ -33,6 +34,7 @@ const Projects = () => {
       year: "2023-Present",
       role: t('projects.soullab.role'),
       link : "https://youtu.be/ZRIlTl-4eqQ?si=9iqM5aDPxtJ8Oe39",
+      more : "https://www.facebook.com/soullabtrio/"
     },
     {
       id: 3,
@@ -91,14 +93,26 @@ const Projects = () => {
                     <p className="text-zinc-300 whitespace-pre-line">{project.description}</p>
                     
                     {project.link && (
+                      <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
                       <a 
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-yellow-500 hover:text-yellow-400 transition-colors"
                       >
-                        {t('projects.watchVideo')} →
+                        {t('projects.watchVideo')}
                       </a>
+                      {project.more &&
+                      <a 
+                      href={project.more}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-yellow-500 hover:text-yellow-400 transition-colors"
+                    >
+                      {t('projects.more')}
+                    </a>}
+                    </div>
+                      
                     )}
                   </div>
                 </div>
