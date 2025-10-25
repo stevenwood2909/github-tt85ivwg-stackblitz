@@ -74,9 +74,9 @@ const [visibleAlert, setVisibleAlert] = useState(false);
   };
 
   return (
-    <section id="contact" className="py-20 bg-black">
+    <section id="contact" className="py-20 bg-warm-gradient">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center">
+        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-primary-400 to-warmGold-DEFAULT bg-clip-text text-transparent">
           {t('contact.title')}
         </h2>
 
@@ -88,13 +88,13 @@ const [visibleAlert, setVisibleAlert] = useState(false);
             <div className="space-y-4 text-zinc-300">
               <p>{t('contact.description')}</p>
 
-              <div className="flex items-center space-x-3">
-                <Mail size={20} className="text-yellow-500" />
+              <div className="flex items-center space-x-3 hover:translate-x-2 transition-transform duration-300">
+                <Mail size={20} className="text-primary-500" />
                 <span>contact@stephaneledro.com</span>
               </div>
 
-              <div className="flex items-center space-x-3">
-                <Phone size={20} className="text-yellow-500" />
+              <div className="flex items-center space-x-3 hover:translate-x-2 transition-transform duration-300">
+                <Phone size={20} className="text-primary-500" />
                 <span>+33 (0)6 51 41 86 04</span>
               </div>
             </div>
@@ -109,7 +109,7 @@ const [visibleAlert, setVisibleAlert] = useState(false);
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-yellow-500 transition-colors"
+                className="w-full px-4 py-2 bg-zinc-900/50 border border-primary-900/30 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
                 required
               />
             </div>
@@ -122,7 +122,7 @@ const [visibleAlert, setVisibleAlert] = useState(false);
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-yellow-500 transition-colors"
+                className="w-full px-4 py-2 bg-zinc-900/50 border border-primary-900/30 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
                 required
               />
             </div>
@@ -138,14 +138,14 @@ const [visibleAlert, setVisibleAlert] = useState(false);
                 id="message"
                 name="message"
                 rows={4}
-                className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:border-yellow-500 transition-colors"
+                className="w-full px-4 py-2 bg-zinc-900/50 border border-primary-900/30 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
                 required
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="inline-flex items-center space-x-2 bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-colors"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-6 py-3 rounded-full font-semibold hover:from-primary-500 hover:to-primary-400 hover:scale-105 transition-all duration-300 shadow-lg shadow-primary-950/50"
             >
               <Send size={20} />
               <span>{t('contact.send')}</span>

@@ -4,10 +4,10 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { usePlayer } from '../contexts/PlayerContext';
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 interface AudioFile {
   id: string;
@@ -82,12 +82,12 @@ const MyAudio = () => {
           ) : audioFiles.length === 0 ? (
             <div className="text-center text-zinc-400">{t('music.noTracks')}</div>
           ) : (
-            <div className="bg-black/50 backdrop-blur-sm rounded-lg overflow-hidden border border-accent-light/10">
+            <div className="bg-gradient-to-br from-black/60 to-zinc-900/60 backdrop-blur-sm rounded-lg overflow-hidden border border-primary-800/20 shadow-lg shadow-primary-950/50">
               {audioFiles.map((file) => (
                 <div
                   key={file.id}
-                  className={`flex items-center justify-between py-2 px-3 hover:bg-accent-light/5 transition-colors ${
-                    currentTrack?.id === file.id ? 'bg-accent-light/10' : ''
+                  className={`flex items-center justify-between py-2 px-3 hover:bg-primary-950/30 transition-all duration-300 ${
+                    currentTrack?.id === file.id ? 'bg-primary-950/40 border-l-2 border-primary-600' : ''
                   }`}
                 >
                   <div className="flex items-center space-x-3">
@@ -99,7 +99,7 @@ const MyAudio = () => {
                           playTrack(file);
                         }
                       }}
-                      className="w-8 h-8 rounded-full bg-accent text-black flex items-center justify-center hover:bg-accent-light transition-colors"
+                      className="w-8 h-8 rounded-full bg-primary-600 text-white flex items-center justify-center hover:bg-primary-500 hover:scale-110 transition-all duration-300 shadow-md shadow-primary-900/50"
                       aria-label={currentTrack?.id === file.id && isPlaying ? 'Pause' : 'Play'}
                     >
                       {currentTrack?.id === file.id && isPlaying ? (
@@ -131,13 +131,13 @@ const MyAudio = () => {
                 alt={album.title}
                 className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-zinc-950/60 to-transparent flex flex-col justify-end p-6">
                 <h3 className="text-xl font-bold">{album.title}</h3>
                 <p className="text-zinc-400">{album.year}</p>
                 
                 <a 
                   href={album.spotifyUrl}
-                  className="mt-4 inline-flex items-center space-x-2 text-accent-light hover:text-accent transition-colors"
+                  className="mt-4 inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-all duration-300 hover:scale-105"
                 >
                   <Play size={20} />
                   <span>{t('music.listen')}</span>

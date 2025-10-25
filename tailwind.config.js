@@ -5,22 +5,32 @@ export default {
     extend: {
       colors: {
         primary: {
-          50: '#f5f3f0',
-          100: '#e6e0d9',
-          200: '#d1c5b7',
-          300: '#b9a68f',
-          400: '#a68c71',
-          500: '#8c6f52',
-          600: '#735a43',
-          700: '#5a4535',
-          800: '#42321f',
-          900: '#2b1f12',
-          950: '#1a130b',
+          50: '#fef9f3',
+          100: '#fceee0',
+          200: '#f8d9bc',
+          300: '#f3be8d',
+          400: '#eda05c',
+          500: '#e8843c',
+          600: '#d96b2b',
+          700: '#b55424',
+          800: '#8f4325',
+          900: '#743922',
+          950: '#3f1b0f',
         },
         accent: {
-          light: '#b9a68f',
-          DEFAULT: '#8c6f52',
-          dark: '#5a4535',
+          light: '#f3be8d',
+          DEFAULT: '#d96b2b',
+          dark: '#b55424',
+        },
+        warmGold: {
+          light: '#f5e6d3',
+          DEFAULT: '#d4af37',
+          dark: '#b8941f',
+        },
+        deepBlue: {
+          light: '#4a5b7c',
+          DEFAULT: '#2c3e5e',
+          dark: '#1a2841',
         },
       },
       fontFamily: {
@@ -33,7 +43,8 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'section-pattern': 'linear-gradient(to right, rgba(185, 166, 143, 0.05), rgba(140, 111, 82, 0.05))',
+        'section-pattern': 'linear-gradient(to right, rgba(232, 132, 60, 0.05), rgba(212, 175, 55, 0.05))',
+        'warm-gradient': 'linear-gradient(135deg, rgba(217, 107, 43, 0.1), rgba(212, 175, 55, 0.1))',
       },
       letterSpacing: {
         tight: '-0.02em',

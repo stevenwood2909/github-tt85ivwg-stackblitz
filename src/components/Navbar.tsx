@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full bg-black/90 backdrop-blur-sm z-40">
+    <nav className="fixed w-full bg-gradient-to-r from-black/95 via-zinc-950/95 to-stone-950/95 backdrop-blur-md border-b border-primary-900/20 z-40">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="text-xl font-bold whitespace-nowrap">
@@ -32,8 +32,8 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`hover:text-yellow-500 transition-colors ${
-                  location.pathname === item.path ? 'text-yellow-500' : ''
+                className={`hover:text-primary-400 transition-all duration-300 hover:scale-105 ${
+                  location.pathname === item.path ? 'text-primary-500 font-medium' : 'text-zinc-300'
                 }`}
               >
                 {item.label}
@@ -66,8 +66,8 @@ const Navbar = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`block py-2 px-3 hover:bg-zinc-800/50 rounded-lg transition-colors ${
-                location.pathname === item.path ? 'text-yellow-500' : ''
+              className={`block py-2 px-3 hover:bg-primary-950/30 rounded-lg transition-all duration-300 ${
+                location.pathname === item.path ? 'text-primary-500 bg-primary-950/20 font-medium' : 'text-zinc-300'
               }`}
               onClick={() => setIsOpen(false)}
             >

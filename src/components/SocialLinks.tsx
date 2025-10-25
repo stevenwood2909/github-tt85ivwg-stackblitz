@@ -51,7 +51,7 @@ const SocialLinks = ({ items, links }: SocialLinksProps)  => {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-zinc-400 hover:text-yellow-500 transition-colors duration-300 transform hover:scale-110"
+          className="text-zinc-400 hover:text-primary-400 transition-all duration-300 transform hover:scale-110 hover:rotate-6"
           aria-label={link.label}
         >
           {link.icon}

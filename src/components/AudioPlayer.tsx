@@ -15,21 +15,21 @@ import { Slider } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const CustomSlider = styled(Slider)({
-  color: '#fbbf2f',
+  color: '#d96b2b',
   '& .MuiSlider-thumb': {
-    backgroundColor: '#fbbf2f',
+    backgroundColor: '#d96b2b',
     '&:hover, &.Mui-focusVisible': {
-      boxShadow: '0 0 0 8px rgba(251, 191, 47, 0.16)',
+      boxShadow: '0 0 0 8px rgba(217, 107, 43, 0.16)',
     },
     '&.Mui-active': {
-      boxShadow: '0 0 0 12px rgba(251, 191, 47, 0.16)',
+      boxShadow: '0 0 0 12px rgba(217, 107, 43, 0.16)',
     },
   },
   '& .MuiSlider-rail': {
     backgroundColor: '#404040',
   },
   '& .MuiSlider-track': {
-    backgroundColor: '#fbbf2f',
+    backgroundColor: '#d96b2b',
   },
 });
 
@@ -95,7 +95,7 @@ const AudioPlayer = () => {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 bg-zinc-900/80 backdrop-blur-md border-t border-zinc-800/50 transition-all duration-300 ${
+      className={`fixed bottom-0 left-0 right-0 bg-gradient-to-r from-zinc-900/90 via-stone-900/90 to-zinc-900/90 backdrop-blur-md border-t border-primary-900/30 transition-all duration-300 ${
         isCollapsed ? 'h-14' : 'h-auto'
       } z-50`}
     >
