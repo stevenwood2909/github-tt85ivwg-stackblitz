@@ -50,7 +50,7 @@ const Concerts = () => {
     return (
       <section
         id="concerts"
-        className="py-20 bg-gradient-radial from-black to-zinc-900/50"
+        className="py-20 bg-black"
       >
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center">
@@ -68,7 +68,7 @@ const Concerts = () => {
     return (
       <section
         id="concerts"
-        className="py-20 bg-gradient-radial from-black to-zinc-900/50"
+        className="py-20 bg-black"
       >
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center">

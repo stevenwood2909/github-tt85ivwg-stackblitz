@@ -74,7 +74,7 @@ const [visibleAlert, setVisibleAlert] = useState(false);
   };
 
   return (
-    <section id="contact" className="py-20 bg-warm-gradient">
+    <section id="contact" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-primary-400 to-warmGold-DEFAULT bg-clip-text text-transparent">
           {t('contact.title')}

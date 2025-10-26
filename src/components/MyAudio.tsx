@@ -67,7 +67,7 @@ const MyAudio = () => {
   };
 
   return (
-    <section id="music" className="py-20 bg-section-pattern">
+    <section id="music" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center">{t('music.title')}</h2>
 
@@ -82,7 +82,7 @@ const MyAudio = () => {
           ) : audioFiles.length === 0 ? (
             <div className="text-center text-zinc-400">{t('music.noTracks')}</div>
           ) : (
-            <div className="bg-gradient-to-br from-black/60 to-zinc-900/60 backdrop-blur-sm rounded-lg overflow-hidden border border-primary-800/20 shadow-lg shadow-primary-950/50">
+            <div className="bg-black/80 backdrop-blur-sm rounded-lg overflow-hidden border border-primary-800/20 shadow-lg shadow-primary-950/50">
               {audioFiles.map((file) => (
                 <div
                   key={file.id}
