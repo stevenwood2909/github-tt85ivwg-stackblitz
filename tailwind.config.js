@@ -5,46 +5,51 @@ export default {
     extend: {
       colors: {
         primary: {
-          50: '#fdfbf7',
-          100: '#faf5e6',
-          200: '#f5eacc',
-          300: '#ead9a8',
-          400: '#ddc575',
-          500: '#d4af37',
-          600: '#c29d2e',
-          700: '#a38428',
-          800: '#856b26',
-          900: '#6e5923',
-          950: '#3e3012',
+          50: '#fdf8f3',
+          100: '#faecd7',
+          200: '#f3d5a3',
+          300: '#e8b967',
+          400: '#dca341',
+          500: '#c18b1e', // plus chaud que ton gold d’origine
+          600: '#a87619',
+          700: '#865e16',
+          800: '#654714',
+          900: '#4a3511',
+          950: '#2b1f0a',
         },
         accent: {
-          light: '#ead9a8',
-          DEFAULT: '#d4af37',
-          dark: '#a38428',
+          light: '#f0cf9f',
+          DEFAULT: '#c18b1e',
+          dark: '#8c6114',
         },
         warmGold: {
-          light: '#f5e6d3',
-          DEFAULT: '#d4af37',
-          dark: '#b8941f',
+          light: '#f5e0b8',
+          DEFAULT: '#dca341',
+          dark: '#a87619',
         },
         deepBlue: {
-          light: '#4a5b7c',
-          DEFAULT: '#2c3e5e',
-          dark: '#1a2841',
+          light: '#556080',
+          DEFAULT: '#2b3858', // plus chaud, moins “corporate”
+          dark: '#1c253d',
+        },
+        earth: {
+          light: '#c97b5a',
+          DEFAULT: '#a85a3b', // note cuivrée, chaleureuse
+          dark: '#7b3e2a',
+        },
+        background: {
+          DEFAULT: '#1a130b', // tu peux le garder tel quel
+          dark: '#22160d',
         },
       },
       fontFamily: {
         display: ['Playfair Display', 'serif'],
         sans: ['Work Sans', 'system-ui', 'sans-serif'],
       },
-      background: {
-        DEFAULT: '#1a130b',
-        dark: '#2b1f12',
-      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'section-pattern': 'linear-gradient(to right, rgba(232, 132, 60, 0.05), rgba(212, 175, 55, 0.05))',
-        'warm-gradient': 'linear-gradient(135deg, rgba(217, 107, 43, 0.1), rgba(212, 175, 55, 0.1))',
+        'section-pattern': 'linear-gradient(to right, rgba(168, 90, 59, 0.05), rgba(193, 139, 30, 0.05))',
+        'warm-gradient': 'linear-gradient(135deg, rgba(168, 90, 59, 0.1), rgba(193, 139, 30, 0.1))',
       },
       letterSpacing: {
         tight: '-0.02em',
