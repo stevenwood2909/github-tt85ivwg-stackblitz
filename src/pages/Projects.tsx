@@ -66,7 +66,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="pt-20 min-h-screen bg-gradient-to-b from-black to-zinc-900">
+    <div className="pt-20 min-h-screen bg-black">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-12 text-center">{t('projects.title')}</h1>
         
@@ -88,7 +88,7 @@ const Projects = () => {
                 <div className="flex flex-col justify-center">
                   <div className="space-y-4">
                     <h2 className="text-2xl font-bold">{project.title}</h2>
-                    <p className="text-yellow-500">{project.role}</p>
+                    <p className="text-primary-400">{project.role}</p>
                     <p className="text-sm text-zinc-400">{project.year}</p>
                     <p className="text-zinc-300 whitespace-pre-line">{project.description}</p>
                     
@@ -98,7 +98,7 @@ const Projects = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-yellow-500 hover:text-yellow-400 transition-colors"
+                        className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
                       >
                         {t('projects.watchVideo')}
                       </a>
@@ -107,7 +107,7 @@ const Projects = () => {
                       href={project.more}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-yellow-500 hover:text-yellow-400 transition-colors"
+                      className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
                     >
                       {t('projects.more')}
                     </a>}

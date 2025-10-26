@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full bg-gradient-to-r from-black/95 via-zinc-950/95 to-stone-950/95 backdrop-blur-md border-b border-primary-900/20 z-40">
+    <nav className="fixed w-full bg-black/95 backdrop-blur-md border-b border-primary-900/20 z-40">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="text-xl font-bold whitespace-nowrap">

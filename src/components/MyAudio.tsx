@@ -131,7 +131,7 @@ const MyAudio = () => {
                 alt={album.title}
                 className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-zinc-950/60 to-transparent flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-6">
                 <h3 className="text-xl font-bold">{album.title}</h3>
                 <p className="text-zinc-400">{album.year}</p>
                 
