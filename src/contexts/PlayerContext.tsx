@@ -14,6 +14,7 @@ interface Track {
   artist: string;
   audio_url: string;
   duration: number;
+  rank: number;
 }
 
 interface PlayerContextType {
@@ -57,7 +58,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
       const { data, error } = await supabase
         .from('tracks')
         .select('*')
-        .order('created_at');
+        .order('rank');
       console.log(error);
       console.log(data);
       if (error) throw error;

@@ -15,6 +15,7 @@ interface AudioFile {
   artist: string;
   audio_url: string;
   duration: number;
+  rank: number;
 }
 
 const musicAlbums = [
@@ -46,7 +47,7 @@ const MyAudio = () => {
         const { data, error } = await supabase
           .from('tracks')
           .select('*')
-          .order('created_at', { ascending: true });
+          .order('rank', { ascending: true });
 
         if (error) throw error;
         setAudioFiles(data || []);
