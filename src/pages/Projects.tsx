@@ -37,13 +37,13 @@ const Projects = () => {
       more : "https://www.facebook.com/soullabtrio/"
     },
     {
-      id: 3,
-      title: "Yvan Knorst Trio",
-      description: t('projects.knorst.description'),
-      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_trio_KLDD_reduc.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fdHJpb19LTEREX3JlZHVjLmpwZyIsImlhdCI6MTc1OTY3MDgzOSwiZXhwIjoxODIyNzQyODM5fQ.Sepyqhi9Esc-6tWrAbpj9HXNbBwGE9EnjF7gtO5A6g0",
-      year: "2022-2025",
-      role: t('projects.knorst.role'),
-      link : "https://www.youtube.com/watch?v=dRLmGg-xQu8",
+      id:3,
+      title: "2 REEDS",
+      description: t('projects.tworeeds.description'),
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/Two%20reeds-photo-reduc.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvVHdvIHJlZWRzLXBob3RvLXJlZHVjLmpwZWciLCJpYXQiOjE3NjI2Mjg0NzAsImV4cCI6MTc5NDE2NDQ3MH0.CWSeZx8W16czpO8H-FXrDQyGT0USyHiRMrQwfbnGycs",
+      year: "2025-present",
+      role: t('projects.tworeeds.role'),
+      //link: "https://www.youtube.com/watch?v=9NJb52L17lE&list=PL90jIJ2vHeIAiNXvVwJu_OILWLW9DWeV7&index=2"
     },
     {
       id:4,
@@ -54,8 +54,18 @@ const Projects = () => {
       role: t('projects.jimpoleya.role'),
       link: "https://www.youtube.com/watch?v=9NJb52L17lE&list=PL90jIJ2vHeIAiNXvVwJu_OILWLW9DWeV7&index=2"
     },
+
     {
       id:5,
+      title: "Yvan Knorst Trio",
+      description: t('projects.knorst.description'),
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_trio_KLDD_reduc.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fdHJpb19LTEREX3JlZHVjLmpwZyIsImlhdCI6MTc1OTY3MDgzOSwiZXhwIjoxODIyNzQyODM5fQ.Sepyqhi9Esc-6tWrAbpj9HXNbBwGE9EnjF7gtO5A6g0",
+      year: "2022-2025",
+      role: t('projects.knorst.role'),
+      link : "https://www.youtube.com/watch?v=dRLmGg-xQu8",
+    },
+    {
+      id:6,
       title: "Mahmoud Ahmed & Badume's Band",
       description: t('projects.badume.description'),
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/mahmoud-ahmed.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvbWFobW91ZC1haG1lZC53ZWJwIiwiaWF0IjoxNzU5NjcwNzg2LCJleHAiOjE4MjI3NDI3ODZ9.E-leYH9pdEvupC6m63UFPILKcVFUkPJG303gTrx9S0k",
