@@ -57,7 +57,8 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
       const { data, error } = await supabase
         .from('tracks')
         .select('*')
-        .order('created_at');
+        .gt('rank', 0)
+        .order('rank');
       console.log(error);
       console.log(data);
       if (error) throw error;
