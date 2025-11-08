@@ -13,10 +13,10 @@ const MyVideo = () => {
       youtubeUrl: "https://www.youtube.com/watch_popup?v=D9xePI2FGxg&autoplay=1"
     },
     {
-      title: "La folie des passions (teaser 2023)",
-      description: t('video.description_folie'),
-      thumbnail: "https://img.youtube.com/vi/dRLmGg-xQu8/maxresdefault.jpg",
-      youtubeUrl: "https://www.youtube.com/watch_popup?v=dRLmGg-xQu8"
+      title: "Addis",
+      description: t('video.description_addis'),
+      thumbnail: "https://img.youtube.com/vi/Tce6sK95jyY/maxresdefault.jpg",
+      youtubeUrl: "https://www.youtube.com/watch_popup?v=Tce6sK95jyY"
     },
     {
       title: "Belomi Benna",
@@ -25,10 +25,10 @@ const MyVideo = () => {
       youtubeUrl: "https://www.youtube.com/watch?v=YhMgUTvV4XY"
     },
     {
-      title: "Addis",
-      description: t('video.description_addis'),
-      thumbnail: "https://img.youtube.com/vi/Tce6sK95jyY/maxresdefault.jpg",
-      youtubeUrl: "https://www.youtube.com/watch_popup?v=Tce6sK95jyY"
+      title: "La folie des passions (teaser 2023)",
+      description: t('video.description_folie'),
+      thumbnail: "https://img.youtube.com/vi/dRLmGg-xQu8/maxresdefault.jpg",
+      youtubeUrl: "https://www.youtube.com/watch_popup?v=dRLmGg-xQu8"
     }
   ];
 

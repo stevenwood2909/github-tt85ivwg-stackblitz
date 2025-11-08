@@ -7,7 +7,7 @@ const Biography = () => {
   return (
     <section className="pt-20 min-h-screen bg-black">
       <div className="container mx-auto px-4 py-12">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-primary-400 to-warmGold-DEFAULT bg-clip-text text-transparent">{t('bio.title')}</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center">{t('bio.title')}</h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="group">

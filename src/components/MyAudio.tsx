@@ -46,7 +46,8 @@ const MyAudio = () => {
         const { data, error } = await supabase
           .from('tracks')
           .select('*')
-          .order('created_at', { ascending: true });
+          .gt('rank',0)
+          .order('rank', { ascending: true });
 
         if (error) throw error;
         setAudioFiles(data || []);
