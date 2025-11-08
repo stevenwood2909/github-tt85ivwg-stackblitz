@@ -45,7 +45,7 @@ const translations = {
     'projects.knorst.role': 'Clarinetist, Composer',
 'projects.jimpoleya.description': 'Collaboration with Drummer Jimmy Poleya and his soul/funk collective bands : "Electrik City Funk" and "Funny vibes", who perpetuate the hits of soul and funk music.',
     'projects.jimpoleya.role': 'Saxophonist',
-    'projects.tworeeds.description': 'Two bass clarinets, two kindred spirits, a shared desire for exploration.\n An intimate sonic journey, inspired by world music, where lyricism and trance, composition and improvisation intertwine. Their incisive playing and unwavering energy are always driven by the simple pleasure of vibrating together. \n Erwan Lhermenier : Clarinets \n Stéphane Le Dro : Clarinets, composition',
+    'projects.tworeeds.description': 'Two bass clarinets, two kindred spirits, a shared desire for exploration.\n\n An intimate sonic journey, inspired by world music, where lyricism and trance, composition and improvisation intertwine. Their incisive playing and unwavering energy are always driven by the simple pleasure of vibrating together. \n Erwan Lhermenier : Clarinets \n Stéphane Le Dro : Clarinets, composition',
     'projects.tworeeds.role': 'Clarinettist, composer',
 
     // Video
@@ -115,7 +115,7 @@ const translations = {
     'projects.knorst.role': 'Clarinettiste, Compositeur',
     'projects.jimpoleya.description': 'Collaboration avec le batteur Jimmy Poleya et ses collectifs de soul/funk : "Electrik City Funk" et "Funny vibes", qui perpétuent les hits de la soul et funk music.',
     'projects.jimpoleya.role': 'Saxophoniste',
-    'projects.tworeeds.description': '2 clarinettes basses, 2 souffles complices, un même désir d’exploration.\n Un voyage sonore intime, inspiré des musiques du monde, où se mêlent lyrisme et transe, écriture et improvisation.\n Leur jeu incisif et leur énergie obstinée sont toujours animés par ce plaisir simple de vibrer ensemble.\n Erwan Lhermenier : Clarinettes \n Stéphane Le Dro : Clarinettes, composition',
+    'projects.tworeeds.description': '2 clarinettes basses, 2 souffles complices, un même désir d’exploration.\n\n Un voyage sonore intime, inspiré des musiques du monde, où se mêlent lyrisme et transe, écriture et improvisation.\n Leur jeu incisif et leur énergie obstinée sont toujours animés par ce plaisir simple de vibrer ensemble.\n Erwan Lhermenier : Clarinettes \n Stéphane Le Dro : Clarinettes, composition',
     'projects.tworeeds.role': 'Clarinettiste, composition',
 
     // Video
