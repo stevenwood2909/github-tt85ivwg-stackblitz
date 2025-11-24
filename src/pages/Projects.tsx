@@ -36,7 +36,7 @@ const Projects = () => {
       role: t('projects.soullab.role'),
       link: "https://youtu.be/ZRIlTl-4eqQ?si=9iqM5aDPxtJ8Oe39",
       more: "https://www.facebook.com/soullabtrio/",
-      aspectRatio: 'auto'
+      aspectRatio: 'video'
     },
     {
       id: 3,
