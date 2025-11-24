@@ -87,7 +87,7 @@ const Projects = () => {
               className="group relative overflow-hidden rounded-lg bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 "
             >
               <div className="grid md:grid-cols-2 gap-8 p-8">
-                <div className="relative aspect-video overflow-hidden rounded-lg">
+                <div className="relative aspect-auto overflow-hidden rounded-lg">
                   <img 
                     src={project.image}
                     alt={project.title}
