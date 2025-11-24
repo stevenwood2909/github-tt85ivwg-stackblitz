@@ -36,7 +36,7 @@ const Projects = () => {
       role: t('projects.soullab.role'),
       link: "https://youtu.be/ZRIlTl-4eqQ?si=9iqM5aDPxtJ8Oe39",
       more: "https://www.facebook.com/soullabtrio/",
-      aspectRatio: 'auto'
+      aspectRatio: 'video'
     },
     {
       id: 3,
@@ -92,9 +92,9 @@ const Projects = () => {
               className="group relative overflow-hidden rounded-lg bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 "
             >
               <div className="grid md:grid-cols-2 gap-8 p-8">
-                <div className={`relative overflow-hidden rounded-lg ${
+              <div className={`relative overflow-hidden rounded-lg ${
                   project.aspectRatio === 'video' ? 'aspect-video' : 'aspect-auto'
-                }`}>
+                } ${project.aspectRatio === 'auto' ? 'min-h-80 md:min-h-128' : ''}`}>
                   <img 
                     src={project.image}
                     alt={project.title}

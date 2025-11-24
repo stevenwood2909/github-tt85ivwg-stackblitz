@@ -51,6 +51,10 @@ export default {
         tighter: '-0.04em',
         widest: '0.2em',
       },
+      minHeight: {
+        '128': '32rem', // Adding 'min-h-128' for 32rem
+        '144': '36rem', // Adding 'min-h-144' for 36rem
+      },
     },
   },
   plugins: [],
