@@ -93,8 +93,8 @@ const Projects = () => {
             >
               <div className="grid md:grid-cols-2 gap-8 p-8">
                 <div className={`relative overflow-hidden rounded-lg ${
-                  project.aspectRatio === 'video' ? 'aspect-video' : 'aspect-auto min-h-64 md:min-h-80'
-                }`}>
+                  project.aspectRatio === 'video' ? 'aspect-video' : 'aspect-auto'
+                } ${project.aspectRatio === 'auto' ? 'min-h-64 md:min-h-80' : ''}`}>
                   <img 
                     src={project.image}
                     alt={project.title}
