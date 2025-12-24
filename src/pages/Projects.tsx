@@ -10,7 +10,7 @@ interface Project {
   role: string;
   link?: string;
   more?: string;
-  aspectRatio?: 'video' | 'auto';
+  aspectRatio?: 'landscape' | 'portrait';
 }
 
 const Projects = () => {
@@ -18,17 +18,17 @@ const Projects = () => {
   const { t} =  useLanguage();
   const projects: Project[] = [
     {
-      id: 1,
+      id: 2,
       title: "Solo Project",
       description: t('projects.solo.description'),
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/steph_ledro_solo_reduc_landscape.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvc3RlcGhfbGVkcm9fc29sb19yZWR1Y19sYW5kc2NhcGUucG5nIiwiaWF0IjoxNzQxNzA5OTM3LCJleHAiOjE4OTkzODk5Mzd9.6rfZnMzoq49OCVuyU827LH6khfdbV4gOBo09KZ5mjsE",
       year: "2024-Present",
       role: t('projects.solo.role'),
       link: "https://www.youtube.com/embed/2Dm9-lGBGds?autoplay=1&cc_load_policy=3",
-      aspectRatio: 'video'
+      aspectRatio: 'landscape'
     },
     {
-      id: 2,
+      id: 3,
       title: "SOUL LAB",
       description: t('projects.soullab.description').replace(/\\n/g, "\n"),
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_SOUL_LAB_web.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fU09VTF9MQUJfd2ViLmpwZyIsImlhdCI6MTc0Mjg1Mjk4MCwiZXhwIjoxOTAwNTMyOTgwfQ.pjvIMC2lAX_pufQwL0hg4yrOw-fI4zMqnBA_SfBKbLU",
@@ -36,16 +36,17 @@ const Projects = () => {
       role: t('projects.soullab.role'),
       link: "https://youtu.be/ZRIlTl-4eqQ?si=9iqM5aDPxtJ8Oe39",
       more: "https://www.facebook.com/soullabtrio/",
-      aspectRatio: 'video'
+      aspectRatio: 'landscape'
     },
     {
-      id: 3,
-      title: "2 REEDS",
+      id: 1,
+      title: "Duo  Le Dro - Lhermenier",
       description: t('projects.tworeeds.description'),
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/Two%20reeds-photo-reduc.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvVHdvIHJlZWRzLXBob3RvLXJlZHVjLmpwZWciLCJpYXQiOjE3NjI2Mjg0NzAsImV4cCI6MTc5NDE2NDQ3MH0.CWSeZx8W16czpO8H-FXrDQyGT0USyHiRMrQwfbnGycs",
       year: "2025-present",
       role: t('projects.tworeeds.role'),
-      aspectRatio: 'auto'
+      link: "https://www.youtube.com/watch?v=Gt8oBiU3-Xs",
+      aspectRatio: 'portrait'
     },
     {
       id: 4,
@@ -55,7 +56,7 @@ const Projects = () => {
       year: "2010-present",
       role: t('projects.jimpoleya.role'),
       link: "https://www.youtube.com/watch?v=9NJb52L17lE&list=PL90jIJ2vHeIAiNXvVwJu_OILWLW9DWeV7&index=2",
-      aspectRatio: 'auto'
+      aspectRatio: 'landscape'
     },
 
     {
@@ -66,7 +67,7 @@ const Projects = () => {
       year: "2022-2025",
       role: t('projects.knorst.role'),
       link: "https://www.youtube.com/watch?v=dRLmGg-xQu8",
-      aspectRatio: 'auto'
+      aspectRatio: 'landscape'
     },
     {
       id: 6,
@@ -76,9 +77,11 @@ const Projects = () => {
       year: "2010-2015",
       role: t('projects.badume.role'),
       link: "https://www.youtube.com/watch?v=YhMgUTvV4XY",
-      aspectRatio: 'auto'
+      aspectRatio: 'landscape'
     }
   ];
+
+  const sortedProjects = [...projects].sort((a, b) => a.id - b.id);
 
   return (
     <div className="pt-20 min-h-screen bg-black">
@@ -86,42 +89,53 @@ const Projects = () => {
         <h1 className="text-4xl font-bold mb-12 text-center">{t('projects.title')}</h1>
         
         <div className="grid gap-12">
-          {projects.map((project) => (
+          {sortedProjects.map((sortedProjects) => (
             <div 
-              key={project.id}
+              key={sortedProjects.id}
               className="group relative overflow-hidden rounded-lg bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 "
             >
               <div className="grid md:grid-cols-2 gap-8 p-8">
-                <div className={`relative overflow-hidden rounded-lg ${
-                  project.aspectRatio === 'video' ? 'aspect-video' : 'aspect-auto'
-                } ${project.aspectRatio === 'auto' ? 'min-h-full md:min-h-80' : ''}`}>
-                  <img 
-                    src={project.image}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+              <div
+  className={`bg-zinc-950 rounded-lg overflow-hidden
+              flex items-center justify-center
+              ${sortedProjects.aspectRatio === 'landscape'
+                ? 'aspect-video'
+                : ''}`}
+>
+  {/* WRAPPER QUI GÈRE LE SCALE */}
+  <div className="w-full h-full transition-transform duration-500 group-hover:scale-105">
+    <img
+      src={sortedProjects.image}
+      alt={sortedProjects.title}
+      className={`object-contain rounded-lg
+                  ${sortedProjects.aspectRatio === 'landscape'
+                    ? 'w-full h-full'
+                    : 'w-auto h-auto max-h-[80vh]'}`}
+    />
+  </div>
+</div>
+
                 
                 <div className="flex flex-col justify-center">
                   <div className="space-y-4">
-                    <h2 className="text-2xl font-bold">{project.title}</h2>
-                    <p className="text-primary-400">{project.role}</p>
-                    <p className="text-sm text-zinc-400">{project.year}</p>
-                    <p className="text-zinc-300 whitespace-pre-line">{project.description}</p>
+                    <h2 className="text-2xl font-bold">{sortedProjects.title}</h2>
+                    <p className="text-primary-400">{sortedProjects.role}</p>
+                    <p className="text-sm text-zinc-400">{sortedProjects.year}</p>
+                    <p className="text-zinc-300 whitespace-pre-line">{sortedProjects.description}</p>
                     
-                    {project.link && (
+                    {sortedProjects.link && (
                       <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
                       <a 
-                        href={project.link}
+                        href={sortedProjects.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
                       >
                         {t('projects.watchVideo')}
                       </a>
-                      {project.more &&
+                      {sortedProjects.more &&
                       <a 
-                      href={project.more}
+                      href={sortedProjects.more}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
