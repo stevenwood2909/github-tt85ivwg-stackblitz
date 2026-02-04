@@ -15,8 +15,8 @@ interface Project {
 
 const Projects = () => {
   //const { tWithLineBreaks } = useLanguage();
-  const { t} =  useLanguage();
-  const projects: Project[] = [
+  const { t } = useLanguage();
+  const myProjects: Project[] = [
     {
       id: 2,
       title: "Solo Project",
@@ -46,9 +46,14 @@ const Projects = () => {
       year: "2025-present",
       role: t('projects.tworeeds.role'),
       link: "https://www.youtube.com/watch?v=Gt8oBiU3-Xs",
+      more: "https://www.stephaneledro.com/llduo",
       aspectRatio: 'portrait'
     },
+    
+  ];
+  const otherProjects: Project[] = [
     {
+     
       id: 4,
       title: "Jim Poleya groups",
       description: t('projects.jimpoleya.description'),
@@ -58,9 +63,19 @@ const Projects = () => {
       link: "https://www.youtube.com/watch?v=9NJb52L17lE&list=PL90jIJ2vHeIAiNXvVwJu_OILWLW9DWeV7&index=2",
       aspectRatio: 'landscape'
     },
-
     {
+     
       id: 5,
+      title: "Zambrocal",
+      description: t('projects.zambrocal.description'),
+      image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/zambrocal_jim.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvemFtYnJvY2FsX2ppbS5qcGciLCJpYXQiOjE3NzAyMDYyMzcsImV4cCI6MTgzMzI3ODIzN30.bEMgHWaUSSteHCG6rIwQQBrdiROnMyVfbJ2IVTlnhPI",
+      year: "2010-present",
+      role: t('projects.zambrocal.role'),
+      link: "https://www.youtube.com/watch?v=P8VzCvNwjX4",
+      aspectRatio: 'landscape'
+    },
+    {
+      id: 6,
       title: "Yvan Knorst Trio",
       description: t('projects.knorst.description'),
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_trio_KLDD_reduc.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fdHJpb19LTEREX3JlZHVjLmpwZyIsImlhdCI6MTc1OTY3MDgzOSwiZXhwIjoxODIyNzQyODM5fQ.Sepyqhi9Esc-6tWrAbpj9HXNbBwGE9EnjF7gtO5A6g0",
@@ -70,7 +85,7 @@ const Projects = () => {
       aspectRatio: 'landscape'
     },
     {
-      id: 6,
+      id: 7,
       title: "Mahmoud Ahmed & Badume's Band",
       description: t('projects.badume.description'),
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/mahmoud-ahmed.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvbWFobW91ZC1haG1lZC53ZWJwIiwiaWF0IjoxNzU5NjcwNzg2LCJleHAiOjE4MjI3NDI3ODZ9.E-leYH9pdEvupC6m63UFPILKcVFUkPJG303gTrx9S0k",
@@ -80,70 +95,140 @@ const Projects = () => {
       aspectRatio: 'landscape'
     }
   ];
-
-  const sortedProjects = [...projects].sort((a, b) => a.id - b.id);
+  const sortedMyProjects = [...myProjects].sort((a, b) => a.id - b.id);
+  const sortedOtherProjects = [...otherProjects].sort((a, b) => a.id - b.id);
 
   return (
     <div className="pt-20 min-h-screen bg-black">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-12 text-center">{t('projects.title')}</h1>
-        
+
         <div className="grid gap-12">
-          {sortedProjects.map((sortedProjects) => (
-            <div 
+          {sortedMyProjects.map((sortedProjects) => (
+            <div
               key={sortedProjects.id}
               className="group relative overflow-hidden rounded-lg bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 "
             >
               <div className="grid md:grid-cols-2 gap-8 p-8">
-              <div
-  className={`bg-zinc-950 rounded-lg overflow-hidden
+                <div
+                  className={`bg-zinc-950 rounded-lg overflow-hidden
               flex items-center justify-center
               ${sortedProjects.aspectRatio === 'landscape'
-                ? 'aspect-video'
-                : ''}`}
->
-  {/* WRAPPER QUI GÈRE LE SCALE */}
-  <div className="w-full h-full transition-transform duration-500 group-hover:scale-105">
-    <img
-      src={sortedProjects.image}
-      alt={sortedProjects.title}
-      className={`object-contain rounded-lg
+                      ? 'aspect-video'
+                      : ''}`}
+                >
+                  {/* WRAPPER QUI GÈRE LE SCALE */}
+                  <div className="w-full h-full transition-transform duration-500 group-hover:scale-105">
+                    <img
+                      src={sortedProjects.image}
+                      alt={sortedProjects.title}
+                      className={`object-contain rounded-lg
                   ${sortedProjects.aspectRatio === 'landscape'
-                    ? 'w-full h-full'
-                    : 'w-auto h-auto max-h-[80vh]'}`}
-    />
-  </div>
-</div>
+                          ? 'w-full h-full'
+                          : 'w-auto h-auto max-h-[80vh]'}`}
+                    />
+                  </div>
+                </div>
 
-                
+
                 <div className="flex flex-col justify-center">
                   <div className="space-y-4">
                     <h2 className="text-2xl font-bold">{sortedProjects.title}</h2>
                     <p className="text-primary-400">{sortedProjects.role}</p>
                     <p className="text-sm text-zinc-400">{sortedProjects.year}</p>
                     <p className="text-zinc-300 whitespace-pre-line">{sortedProjects.description}</p>
-                    
+
                     {sortedProjects.link && (
                       <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
-                      <a 
-                        href={sortedProjects.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
-                      >
-                        {t('projects.watchVideo')}
-                      </a>
-                      {sortedProjects.more &&
-                      <a 
-                      href={sortedProjects.more}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
-                    >
-                      {t('projects.more')}
-                    </a>}
-                    </div>
-                      
+                        <a
+                          href={sortedProjects.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
+                        >
+                          {t('projects.watchVideo')}
+                        </a>
+                        {sortedProjects.more &&
+                          <a
+                            href={sortedProjects.more}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
+                          >
+                            {t('projects.more')}
+                          </a>}
+                      </div>
+
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* collaborations */}
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold mb-12 text-center">{t('projects.collaborations-title')}</h1>
+
+        <div className="grid gap-12">
+          {sortedOtherProjects.map((sortedProjects) => (
+            <div
+              key={sortedProjects.id}
+              className="group relative overflow-hidden rounded-lg bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 "
+            >
+              <div className="grid md:grid-cols-2 gap-8 p-8">
+                <div
+                  className={`bg-zinc-950 rounded-lg overflow-hidden
+              flex items-center justify-center
+              ${sortedProjects.aspectRatio === 'landscape'
+                      ? 'aspect-video'
+                      : ''}`}
+                >
+                  {/* WRAPPER QUI GÈRE LE SCALE */}
+                  <div className="w-full h-full transition-transform duration-500 group-hover:scale-105">
+                    <img
+                      src={sortedProjects.image}
+                      alt={sortedProjects.title}
+                      className={`object-contain rounded-lg
+                  ${sortedProjects.aspectRatio === 'landscape'
+                          ? 'w-full h-full'
+                          : 'w-auto h-auto max-h-[80vh]'}`}
+                    />
+                  </div>
+                </div>
+
+
+
+                <div className="flex flex-col justify-center">
+                  <div className="space-y-4">
+                    <h2 className="text-2xl font-bold">{sortedProjects.title}</h2>
+                    <p className="text-primary-400">{sortedProjects.role}</p>
+                    <p className="text-sm text-zinc-400">{sortedProjects.year}</p>
+                    <p className="text-zinc-300 whitespace-pre-line">{sortedProjects.description}</p>
+
+                    {sortedProjects.link && (
+                      <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
+                        <a
+                          href={sortedProjects.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
+                        >
+                          {t('projects.watchVideo')}
+                        </a>
+                        {sortedProjects.more &&
+                          <a
+                            href={sortedProjects.more}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-primary-400 hover:text-primary-300 transition-colors"
+                          >
+                            {t('projects.more')}
+                          </a>}
+                      </div>
+
                     )}
                   </div>
                 </div>
@@ -153,6 +238,8 @@ const Projects = () => {
         </div>
       </div>
     </div>
+
+
   );
 };
 
