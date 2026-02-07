@@ -34,7 +34,7 @@ const Projects = () => {
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/photo_SOUL_LAB_web.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvcGhvdG9fU09VTF9MQUJfd2ViLmpwZyIsImlhdCI6MTc0Mjg1Mjk4MCwiZXhwIjoxOTAwNTMyOTgwfQ.pjvIMC2lAX_pufQwL0hg4yrOw-fI4zMqnBA_SfBKbLU",
       year: "2023-Present",
       role: t('projects.soullab.role'),
-      link: "https://www.youtube.com/watch?v=65Cb0fXhOVE",
+      link: "https://www.youtube.com/watch?v=cIopH6LeEpg",
       more: "https://www.facebook.com/soullabtrio/",
       aspectRatio: 'landscape'
     },
