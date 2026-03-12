@@ -35,7 +35,7 @@ const Projects = () => {
       year: "2023-Present",
       role: t('projects.soullab.role'),
       link: "https://www.youtube.com/watch?v=cIopH6LeEpg",
-      more: "https://www.facebook.com/soullabtrio/",
+      more: "https://www.soullabtrio.com",
       aspectRatio: 'landscape'
     },
     {
