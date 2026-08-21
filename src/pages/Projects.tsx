@@ -40,7 +40,7 @@ const Projects = () => {
     },
     {
       id: 1,
-      title: "Duo  Le Dro - Lhermenier",
+      title: "TWO REEDS",
       description: t('projects.tworeeds.description'),
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/Two%20reeds-photo-reduc.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvVHdvIHJlZWRzLXBob3RvLXJlZHVjLmpwZWciLCJpYXQiOjE3NjI2Mjg0NzAsImV4cCI6MTc5NDE2NDQ3MH0.CWSeZx8W16czpO8H-FXrDQyGT0USyHiRMrQwfbnGycs",
       year: "2025-present",
