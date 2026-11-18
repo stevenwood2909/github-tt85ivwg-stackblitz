@@ -45,8 +45,8 @@ const Projects = () => {
       image: "https://bszyjfznackeyzqhqmtp.supabase.co/storage/v1/object/sign/images/Two%20reeds-photo-reduc.jpeg?token=eyJraWQiOiJhN2U0N2EyMy05MjgyLTQ3ZjktOTM0NC1mMWQxYzE0N2NjNGYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvVHdvIHJlZWRzLXBob3RvLXJlZHVjLmpwZWciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzk1MDA3OTU0LCJleHAiOjE5NTI2ODc5NTR9.P8_64iXQDBnwIyjbFmJotIJrI7KYc9Hy3cP6gnUH11E",
       year: "2025-present",
       role: t('projects.tworeeds.role'),
-      link: "https://www.youtube.com/watch?v=Gt8oBiU3-Xs",
-      more: "https://www.stephaneledro.com/llduo",
+      link: "https://www.youtube.com/watch?v=QrKU0kJ6zgI",
+      more: "https://www.stephaneledro.com/tworeeds/",
       aspectRatio: 'portrait'
     },
     
